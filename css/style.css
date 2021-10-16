@@ -1,0 +1,197 @@
+/* GLOBAL ========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --vermelho: #E50914; 
+    --preto: #141414;
+    --swiper-theme-color: #fff;
+    --grey: #757575;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: sans-serif;
+    background-color: var(--preto);
+}
+
+/* Menu =========================== */
+
+header .logo{
+    color: var(--vermelho);
+    font-size: 26px;
+    margin-right: 2rem;
+    font-family: 'Bebas Neue', cursive;;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 10px 15px;
+}
+
+header .navagation a{
+    font-size: .8rem;
+    text-decoration: none;
+    color: var(--grey);
+    margin-right
+    : 5px;
+}
+
+header .navagation a:hover{
+    color: #fff;
+}
+header .icons{
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+}
+header .icons i{
+    font-size: 1.5rem;
+    margin-right: 25px;
+    justify-self: flex-end;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Movie in Focus =========================== */
+.focus-movie{
+    font-size: 16px;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)100%), url('/img/lucifer.jpg');
+    background-size: cover;
+    height: 600px;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.containerMovie{
+    padding: 15px;
+    width: 50%;
+    color: #fff;
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)100%)
+}
+
+.containerMovie .title{
+    font-size: 1.7rem;
+    margin-bottom:15px;
+}
+
+.containerMovie .movieDescription{
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin-bottom:15px;
+}
+
+.containerMovie .ratting{
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    color: #E50914;
+}
+.containerMovie .focus-btns{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.containerMovie .focus-btns .btnsMain{
+    background-color: rgba(0, 0, 0, .5);
+    padding: 15px 30px;
+    color: #fff;
+    border: none;
+    width: 50%;
+    font-size: 12px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.containerMovie .focus-btns .btnsMain:hover{
+    background-color: #fff;
+    color: #000;
+}
+.containerMovie .focus-btns .btnsMain i{
+    margin-right: 10px;
+}
+
+/* CAROUSEL ============================= */
+.mySwiper h3{
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 15px;
+    font-weight: bold;
+}
+.swiper-wrapper{
+    cursor: pointer;
+    padding: 20px 0px;
+}
+
+.carousel-slider img{
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel-slider .swiper-slide{
+    transition: 250ms all;
+}
+.carousel-slider .swiper-slide:hover{
+    transform: scale(1.2);
+    margin: 0px 20px;
+    z-index: 1;
+}
+/* FOOTER ======================= */
+footer{
+    color: var(--grey);
+    display: flex;
+    margin: 0px;
+    padding: 60px 60px;
+    justify-content: space-between;
+    background-color: black;
+}
+footer p{
+    margin-top: 10px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+footer p:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+    header .icons{
+        display: none;
+    }
+    .containerMovie .ratting{
+        width: 50%;
+    }
+    .focus-movie{
+        justify-content: center;
+    }
+    .containerMovie .focus-btns{
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .containerMovie .focus-btns .btnsMain{
+        display: flex;
+        margin-bottom: 5px;
+    }
+    footer{
+        font-size: .2rem;
+        padding: 30px 5px;
+    }
+}
